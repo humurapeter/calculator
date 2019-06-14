@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+	</style>
+	
+	<title></title>
+</head>
+<body>
+	<div class="row" style="margin-right: 20px; margin-top: 30px; margin-left: 20px" padding:25px;>
+		<div col-md-3></div>
+		<div class="col-md-6 jumbotron text-center" style="background-color: red; padding-top: 20px">
+			<div style="margin-bottom: 20px"><input type="number" name="a" placeholder="num1" id="a"></div>
+	<div><input type="number" name="b" placeholder="num2" id="b"></div>
+	<div style="margin-top: 20px"><button class="btn btn-success" onclick="add_numbers();">+</button>
+	<button class="btn btn-success"  onclick="subtract_numbers();">-</button>
+	<button class="btn btn-success" onclick;="multi_numbers()">*</button>
+	<button class="btn btn-success"onclick="divide_numbers();" >/</button></div>
+	<p id="number">answer</p>
+</div>
+	</div>
+	<div col-md-3></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+
+function add_numbers(){
+
+var a = parseInt(document.getElementById("a").value);
+// parseDouble() parseFloat()
+var b = parseInt(document.getElementById("b").value);
+
+var sum = a + b;
+
+document.getElementById("number").innerHTML = sum;
+
+}
+
+function subtract_numbers(){
+
+var a = parseInt(document.getElementById("a").value);
+// parseDouble() parseFloat()
+var b = parseInt(document.getElementById("b").value);
+
+var subtraction = a - b;
+
+document.getElementById("number").innerHTML = subtraction;
+
+}
+function multi_numbers(){
+
+var a = parseInt(document.getElementById("a").value);
+// parseDouble() parseFloat()
+var b = parseInt(document.getElementById("b").value);
+
+var mult = a * b;
+
+document.getElementById("number").innerHTML = mult;
+
+}
+
+
+function divide_numbers(){
+
+var a = parseInt(document.getElementById("a").value);
+// parseDouble() parseFloat()
+var b = convertStringToNumber(document.getElementById("b").value);
+
+if (a == 0 && b == 0) {
+	alert("Can not divide by 0");
+	return false;
+} 
+
+var divide = a / b;
+
+document.getElementById("number").innerHTML = divide;
+}
+
+function convertStringToNumber(string){
+	return parseInt(string);
+}
+
+arrayTest();
+// arrays
+function arrayTest(){
+	var students = ["a", "b", "c", "d", "e"];
+
+	for (var controller = 0; controller < students.length; controller++){
+		alert(students[controller]);
+		controller++;
+	}
+}
+
+</script>
