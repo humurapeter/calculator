@@ -7,19 +7,19 @@
 </head>
 <body bgcolor="red">
 	<div class="row" style="margin-right:50px;  margin-left:50px; margin-top: 50px; margin-bottom: 50px; background-color: brown;padding-left: 500px; padding-top: 100px; padding-bottom: 100px;">
-	
-		<div  class="test" style=" margin-top: 50px;" >
-		<input type="number" name="a" id="a" style="margin-bottom: 20px;"><br>
-		<input type="number" name="b" id="b" style="margin-bottom: 20px;"><br>
-		<button style="margin-right: 20;" onclick="add_button();">+</button>
-		<button style="margin-right: 20;">-</button>
 		
-		<button style="margin-right: 20;">*</button>
-		<button style="margin-right: 20;" onclick="divide_button();">/</button>
-		<p id="number" style="margin-bottom: 20px">answer=</p>
-		<button style="margin-right: 20;" onclick="operation();">print operation</button>
-</div>
-</div>
+		<div  class="test" style=" margin-top: 50px;" >
+			<input type="number" name="a" id="a" style="margin-bottom: 20px;"><br>
+			<input type="number" name="b" id="b" style="margin-bottom: 20px;"><br>
+			<button style="margin-right: 20;" onclick="add_button();">+</button>
+			<button style="margin-right: 20;">-</button>
+			
+			<button style="margin-right: 20;">*</button>
+			<button style="margin-right: 20;" onclick="divide_button();">/</button>
+			<p id="number" style="margin-bottom: 20px">answer=</p>
+			<button style="margin-right: 20;" onclick="operation();">print operation</button>
+		</div>
+	</div>
 
 </body>
 </html>
@@ -33,15 +33,15 @@
 		document.getElementById("number").innerHTML = sum;
 	}
 	function sub_button(){
-var a=parseInt(document.getElementById("a").value);
-var b=parseInt(document.getElementById("b").value);
-var sub=a-b;
-alert("answer");
-document.getElementById("number").innerHTML=sub;
+		var a=parseInt(document.getElementById("a").value);
+		var b=parseInt(document.getElementById("b").value);
+		var sub=a-b;
+		alert("answer");
+		document.getElementById("number").innerHTML=sub;
 
 	}
 
-function divide_button(){
+	function divide_button(){
 		var a=parseInt(document.getElementById("a").value);
 		var b=parseInt(document.getElementById("b").value);
 		if(b==0){
@@ -56,10 +56,10 @@ function divide_button(){
 	}
 	function operation(){
 		var operate=["a+b=","a-b=","a*b=","a/b="];
-for(var controlor=0; controlor>5;controlor++){
-alert(operate[controlor]);
+		for(var controlor=0; controlor>5;controlor++){
+			alert(operate[controlor]);
 
-}
+		}
 
 
 
